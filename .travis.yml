@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 8.5.0
+script:
+  - "npm run lint"
+  - "npm run test"
+deploy:
+  provider: heroku
+  api_key:
+    secure: c844cd6e-3795-413f-99a3-d9c7e5cf8733
+  app: ci-cd-node-demo
+  on:
+    repo: gurkan0791/node-heroku-ci-cd  
